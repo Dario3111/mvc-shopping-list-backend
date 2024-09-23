@@ -1,39 +1,29 @@
-Aplicación de Lista de Compras MVC
+# Aplicación de Lista de Compras MVC
+
 Esta aplicación implementa el patrón arquitectónico MVC (Modelo-Vista-Controlador) utilizando React para el frontend, Node.js y Express para el backend, y MySQL como base de datos. El objetivo de la aplicación es gestionar una lista de compras a través de una API RESTful.
 
-Estructura del Proyecto
+## Estructura del Proyecto
+
 El proyecto está organizado en dos partes principales:
 
-bash
-Copiar código
-/shopping-list-backend
-  /controllers      # Contiene la lógica de negocio y maneja las solicitudes del cliente
-  /models           # Interactúa con la base de datos
-  /routes           # Define los endpoints de la API
-  /config           # Configuración de la conexión a la base de datos
-  index.js          # Punto de entrada del servidor
+/shopping-list-backend /controllers # Contiene la lógica de negocio y maneja las solicitudes del cliente /models # Interactúa con la base de datos /routes # Define los endpoints de la API /config # Configuración de la conexión a la base de datos index.js # Punto de entrada del servidor
 
-/shopping-list-frontend
-  /src
-    /components     # Componentes de React para la interfaz de usuario
-    /services       # Servicios para manejar las peticiones HTTP
-  App.js            # Componente principal de la aplicación
-Controlador
+/shopping-list-frontend /src /components # Componentes de React para la interfaz de usuario /services # Servicios para manejar las peticiones HTTP App.js # Componente principal de la aplicación
+
+
+## Controlador
+
 El controlador actúa como intermediario entre el modelo y la vista. Gestiona las solicitudes del cliente, procesando datos a través del modelo y devolviendo respuestas adecuadas. Sus funciones incluyen obtener, agregar y eliminar artículos en la lista de compras.
 
-Ajustes del Archivo .env
-Antes de ejecutar la aplicación, asegúrate de configurar correctamente el archivo .env. Si existe un archivo .env-example, cópialo y renómbralo a .env. Luego, actualiza las siguientes variables con tus credenciales de base de datos:
+## Ajustes del Archivo `.env`
 
-makefile
-Copiar código
-DB_HOST=localhost
-DB_USER=tu_usuario
-DB_PASSWORD=tu_contraseña
-DB_NAME=nombre_base_datos
+Antes de ejecutar la aplicación, asegúrate de configurar correctamente el archivo `.env`. Si existe un archivo `.env-example`, cópialo y renómbralo a `.env`. Luego, actualiza las siguientes variables con tus credenciales de base de datos:
+
+DB_HOST=localhost DB_USER=tu_usuario DB_PASSWORD=tu_contraseña DB_NAME=nombre_base_datos
+
 Asegúrate de que la base de datos y la tabla necesarias estén creadas antes de iniciar la aplicación. Puedes crear la base de datos y la tabla ejecutando el siguiente código en MySQL:
 
-sql
-Copiar código
+```sql
 USE shopping_list_db; -- Selecciona la base de datos
 
 CREATE TABLE items ( -- Crea la tabla
