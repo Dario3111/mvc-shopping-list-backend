@@ -1,5 +1,4 @@
-markdown
-Copiar código
+
 # Aplicación de Lista de Compras MVC
 
 Esta aplicación implementa el patrón arquitectónico MVC (Modelo-Vista-Controlador) utilizando React para el frontend, Node.js y Express para el backend, y MySQL como base de datos. El objetivo de la aplicación es gestionar una lista de compras a través de una API RESTful.
@@ -44,7 +43,7 @@ SELECT * FROM items; -- Consulta la tabla
 SHOW TABLES; -- Muestra las tablas en la base de datos
 Clonar el Repositorio
 Para clonar el repositorio, utiliza el siguiente comando en tu terminal:
-
+```
 bash
 Copiar código
 git clone https://github.com/Dario3111/mvc-shopping-list-backend.git
@@ -59,7 +58,8 @@ Después de clonar el repositorio, asegúrate de instalar las dependencias para 
 
 Instalar dependencias del backend:
 
-Abre tu terminal en la carpeta del backend y ejecuta:
+Abre tu terminal en la carpeta del backend y ejecuta
+
 bash
 Copiar código
 npm install
